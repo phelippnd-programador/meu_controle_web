@@ -1,0 +1,1425 @@
+{
+  "funcionario": [
+    {
+      "id": "3372",
+      "endereco": {
+        "cep": "25901550",
+        "logradouro": "Rua Ministro Aliomar Baleieiro",
+        "numero": "101",
+        "complemento": "",
+        "bairro": "111",
+        "cidade": "001",
+        "estado": "RJ",
+        "ponto_referencia": "",
+        "tipo_residencia": "1"
+      },
+      "pessoais": {
+        "nome": "Riane Alves",
+        "data_nascimento": "24/02/2025"
+      },
+      "contato": {
+        "email": "phelippnd@gmail.com",
+        "telefone": [
+          {
+            "ddd": "21",
+            "numero": "987599613",
+            "tipo": "1"
+          }
+        ]
+      },
+      "especialidades": [
+        {
+          "id": "1"
+        }
+      ],
+      "horarios": [
+        {
+          "diasSemana": "SEG",
+          "de": "12:00",
+          "ate": "12:56"
+        }
+      ]
+    },
+    {
+      "id": "badc",
+      "endereco": {
+        "cep": "25901550",
+        "logradouro": "Rua Ministro Aliomar Baleieiro",
+        "numero": "101",
+        "complemento": "",
+        "bairro": "111",
+        "cidade": "001",
+        "estado": "RJ",
+        "ponto_referencia": "",
+        "tipo_residencia": "1"
+      },
+      "pessoais": {
+        "nome": "Riane Alves",
+        "data_nascimento": "24/02/2025"
+      },
+      "contato": {
+        "email": "phelippnd@gmail.com",
+        "telefone": [
+          {
+            "ddd": "21",
+            "numero": "987599613",
+            "tipo": "1"
+          }
+        ]
+      },
+      "especialidades": [
+        {
+          "id": "1"
+        }
+      ],
+      "horarios": [
+        {
+          "diasSemana": "SEG",
+          "de": "12:00",
+          "ate": "12:56"
+        }
+      ]
+    }
+  ],
+  "tipo-especialidade": [
+    {
+      "label": "Cabelereira",
+      "value": "1"
+    },
+    {
+      "label": "Manicure",
+      "value": "2"
+    }
+  ],
+  "tipo-telefone": [
+    {
+      "label": "Residencial",
+      "value": "1"
+    },
+    {
+      "label": "Comercial",
+      "value": "2"
+    },
+    {
+      "label": "Celular",
+      "value": "3"
+    },
+    {
+      "label": "Fixo",
+      "value": "4"
+    },
+    {
+      "label": "Whatsapp",
+      "value": "5"
+    }
+  ],
+  "tipo-residencia": [
+    {
+      "label": "Casa",
+      "value": "1"
+    },
+    {
+      "label": "Apartamento",
+      "value": "2"
+    },
+    {
+      "label": "Comercial",
+      "value": "3"
+    },
+    {
+      "label": "Outros",
+      "value": "4"
+    }
+  ],
+  "tipo-estado": [
+    {
+      "label": "Acre",
+      "value": "AC"
+    },
+    {
+      "label": "Alagoas",
+      "value": "AL"
+    },
+    {
+      "label": "Amapá",
+      "value": "AP"
+    },
+    {
+      "label": "Amazonas",
+      "value": "AM"
+    },
+    {
+      "label": "Bahia",
+      "value": "BA"
+    },
+    {
+      "label": "Ceará",
+      "value": "CE"
+    },
+    {
+      "label": "Distrito Federal",
+      "value": "DF"
+    },
+    {
+      "label": "Espírito Santo",
+      "value": "ES"
+    },
+    {
+      "label": "Goiás",
+      "value": "GO"
+    },
+    {
+      "label": "Maranhão",
+      "value": "MA"
+    },
+    {
+      "label": "Mato Grosso",
+      "value": "MT"
+    },
+    {
+      "label": "Mato Grosso do Sul",
+      "value": "MS"
+    },
+    {
+      "label": "Minas Gerais",
+      "value": "MG"
+    },
+    {
+      "label": "Pará",
+      "value": "PA"
+    },
+    {
+      "label": "Paraíba",
+      "value": "PB"
+    },
+    {
+      "label": "Paraná",
+      "value": "PR"
+    },
+    {
+      "label": "Pernambuco",
+      "value": "PE"
+    },
+    {
+      "label": "Piauí",
+      "value": "PI"
+    },
+    {
+      "label": "Rio de Janeiro",
+      "value": "RJ"
+    },
+    {
+      "label": "Rio Grande do Norte",
+      "value": "RN"
+    },
+    {
+      "label": "Rio Grande do Sul",
+      "value": "RS"
+    },
+    {
+      "label": "Rondônia",
+      "value": "RO"
+    },
+    {
+      "label": "Roraima",
+      "value": "RR"
+    },
+    {
+      "label": "Santa Catarina",
+      "value": "SC"
+    },
+    {
+      "label": "São Paulo",
+      "value": "SP"
+    },
+    {
+      "label": "Sergipe",
+      "value": "SE"
+    },
+    {
+      "label": "Tocantins",
+      "value": "TO"
+    }
+  ],
+  "tipo-municipio": [
+    {
+      "estado": "AC",
+      "value": [
+        {
+          "label": "Rio Branco",
+          "value": "001"
+        },
+        {
+          "label": "Cruzeiro do Sul",
+          "value": "002"
+        },
+        {
+          "label": "Sena Madureira",
+          "value": "003"
+        },
+        {
+          "label": "Tarauacá",
+          "value": "004"
+        },
+        {
+          "label": "Feijó",
+          "value": "005"
+        },
+        {
+          "label": "Brasiléia",
+          "value": "006"
+        },
+        {
+          "label": "Xapuri",
+          "value": "007"
+        },
+        {
+          "label": "Plácido de Castro",
+          "value": "008"
+        },
+        {
+          "label": "Senador Guiomard",
+          "value": "009"
+        },
+        {
+          "label": "Marechal Thaumaturgo",
+          "value": "010"
+        }
+      ]
+    },
+    {
+      "estado": "AL",
+      "value": [
+        {
+          "label": "Maceió",
+          "value": "001"
+        },
+        {
+          "label": "Arapiraca",
+          "value": "002"
+        },
+        {
+          "label": "Palmeira dos Índios",
+          "value": "003"
+        },
+        {
+          "label": "Rio Largo",
+          "value": "004"
+        },
+        {
+          "label": "Penedo",
+          "value": "005"
+        },
+        {
+          "label": "União dos Palmares",
+          "value": "006"
+        },
+        {
+          "label": "Santana do Ipanema",
+          "value": "007"
+        },
+        {
+          "label": "Delmiro Gouveia",
+          "value": "008"
+        },
+        {
+          "label": "Coruripe",
+          "value": "009"
+        },
+        {
+          "label": "Marechal Deodoro",
+          "value": "010"
+        }
+      ]
+    },
+    {
+      "estado": "AM",
+      "value": [
+        {
+          "label": "Manaus",
+          "value": "001"
+        },
+        {
+          "label": "Parintins",
+          "value": "002"
+        },
+        {
+          "label": "Itacoatiara",
+          "value": "003"
+        },
+        {
+          "label": "Manacapuru",
+          "value": "004"
+        },
+        {
+          "label": "Coari",
+          "value": "005"
+        },
+        {
+          "label": "Tefé",
+          "value": "006"
+        },
+        {
+          "label": "Tabatinga",
+          "value": "007"
+        },
+        {
+          "label": "Maués",
+          "value": "008"
+        },
+        {
+          "label": "Manicoré",
+          "value": "009"
+        },
+        {
+          "label": "Humaitá",
+          "value": "010"
+        }
+      ]
+    },
+    {
+      "estado": "AP",
+      "value": [
+        {
+          "label": "Macapá",
+          "value": "001"
+        },
+        {
+          "label": "Santana",
+          "value": "002"
+        },
+        {
+          "label": "Laranjal do Jari",
+          "value": "003"
+        },
+        {
+          "label": "Oiapoque",
+          "value": "004"
+        },
+        {
+          "label": "Porto Grande",
+          "value": "005"
+        },
+        {
+          "label": "Mazagão",
+          "value": "006"
+        },
+        {
+          "label": "Pedra Branca do Amapari",
+          "value": "007"
+        },
+        {
+          "label": "Tartarugalzinho",
+          "value": "008"
+        },
+        {
+          "label": "Vitória do Jari",
+          "value": "009"
+        },
+        {
+          "label": "Calçoene",
+          "value": "010"
+        }
+      ]
+    },
+    {
+      "estado": "BA",
+      "value": [
+        {
+          "label": "Salvador",
+          "value": "001"
+        },
+        {
+          "label": "Feira de Santana",
+          "value": "002"
+        },
+        {
+          "label": "Vitória da Conquista",
+          "value": "003"
+        },
+        {
+          "label": "Camaçari",
+          "value": "004"
+        },
+        {
+          "label": "Juazeiro",
+          "value": "005"
+        },
+        {
+          "label": "Ilhéus",
+          "value": "006"
+        },
+        {
+          "label": "Itabuna",
+          "value": "007"
+        },
+        {
+          "label": "Lauro de Freitas",
+          "value": "008"
+        },
+        {
+          "label": "Teixeira de Freitas",
+          "value": "009"
+        },
+        {
+          "label": "Barreiras",
+          "value": "010"
+        }
+      ]
+    },
+    {
+      "estado": "CE",
+      "value": [
+        {
+          "label": "Fortaleza",
+          "value": "001"
+        },
+        {
+          "label": "Caucaia",
+          "value": "002"
+        },
+        {
+          "label": "Juazeiro do Norte",
+          "value": "003"
+        },
+        {
+          "label": "Maracanaú",
+          "value": "004"
+        },
+        {
+          "label": "Sobral",
+          "value": "005"
+        },
+        {
+          "label": "Crato",
+          "value": "006"
+        },
+        {
+          "label": "Itapipoca",
+          "value": "007"
+        },
+        {
+          "label": "Maranguape",
+          "value": "008"
+        },
+        {
+          "label": "Iguatu",
+          "value": "009"
+        },
+        {
+          "label": "Quixadá",
+          "value": "010"
+        }
+      ]
+    },
+    {
+      "estado": "DF",
+      "value": [
+        {
+          "label": "Brasília",
+          "value": "001"
+        }
+      ]
+    },
+    {
+      "estado": "ES",
+      "value": [
+        {
+          "label": "Vitória",
+          "value": "001"
+        },
+        {
+          "label": "Vila Velha",
+          "value": "002"
+        },
+        {
+          "label": "Serra",
+          "value": "003"
+        },
+        {
+          "label": "Cariacica",
+          "value": "004"
+        },
+        {
+          "label": "Guarapari",
+          "value": "005"
+        },
+        {
+          "label": "Linhares",
+          "value": "006"
+        },
+        {
+          "label": "São Mateus",
+          "value": "007"
+        },
+        {
+          "label": "Colatina",
+          "value": "008"
+        },
+        {
+          "label": "Aracruz",
+          "value": "009"
+        },
+        {
+          "label": "Cachoeiro de Itapemirim",
+          "value": "010"
+        }
+      ]
+    },
+    {
+      "estado": "GO",
+      "value": [
+        {
+          "label": "Goiânia",
+          "value": "001"
+        },
+        {
+          "label": "Aparecida de Goiânia",
+          "value": "002"
+        },
+        {
+          "label": "Anápolis",
+          "value": "003"
+        },
+        {
+          "label": "Rio Verde",
+          "value": "004"
+        },
+        {
+          "label": "Luziânia",
+          "value": "005"
+        },
+        {
+          "label": "Águas Lindas de Goiás",
+          "value": "006"
+        },
+        {
+          "label": "Valparaíso de Goiás",
+          "value": "007"
+        },
+        {
+          "label": "Trindade",
+          "value": "008"
+        },
+        {
+          "label": "Formosa",
+          "value": "009"
+        },
+        {
+          "label": "Novo Gama",
+          "value": "010"
+        }
+      ]
+    },
+    {
+      "estado": "MA",
+      "value": [
+        {
+          "label": "São Luís",
+          "value": "001"
+        },
+        {
+          "label": "Imperatriz",
+          "value": "002"
+        },
+        {
+          "label": "São José de Ribamar",
+          "value": "003"
+        },
+        {
+          "label": "Timon",
+          "value": "004"
+        },
+        {
+          "label": "Caxias",
+          "value": "005"
+        },
+        {
+          "label": "Paço do Lumiar",
+          "value": "006"
+        },
+        {
+          "label": "Açailândia",
+          "value": "007"
+        },
+        {
+          "label": "Bacabal",
+          "value": "008"
+        },
+        {
+          "label": "Balsas",
+          "value": "009"
+        },
+        {
+          "label": "Codó",
+          "value": "010"
+        }
+      ]
+    },
+    {
+      "estado": "MG",
+      "value": [
+        {
+          "label": "Belo Horizonte",
+          "value": "001"
+        },
+        {
+          "label": "Uberlândia",
+          "value": "002"
+        },
+        {
+          "label": "Contagem",
+          "value": "003"
+        },
+        {
+          "label": "Juiz de Fora",
+          "value": "004"
+        },
+        {
+          "label": "Betim",
+          "value": "005"
+        },
+        {
+          "label": "Montes Claros",
+          "value": "006"
+        },
+        {
+          "label": "Ribeirão das Neves",
+          "value": "007"
+        },
+        {
+          "label": "Uberaba",
+          "value": "008"
+        },
+        {
+          "label": "Governador Valadares",
+          "value": "009"
+        },
+        {
+          "label": "Ipatinga",
+          "value": "010"
+        }
+      ]
+    },
+    {
+      "estado": "MS",
+      "value": [
+        {
+          "label": "Campo Grande",
+          "value": "001"
+        },
+        {
+          "label": "Dourados",
+          "value": "002"
+        },
+        {
+          "label": "Três Lagoas",
+          "value": "003"
+        },
+        {
+          "label": "Corumbá",
+          "value": "004"
+        },
+        {
+          "label": "Ponta Porã",
+          "value": "005"
+        },
+        {
+          "label": "Naviraí",
+          "value": "006"
+        },
+        {
+          "label": "Aquidauana",
+          "value": "007"
+        },
+        {
+          "label": "Sidrolândia",
+          "value": "008"
+        },
+        {
+          "label": "Paranaíba",
+          "value": "009"
+        },
+        {
+          "label": "Nova Andradina",
+          "value": "010"
+        }
+      ]
+    },
+    {
+      "estado": "MT",
+      "value": [
+        {
+          "label": "Cuiabá",
+          "value": "001"
+        },
+        {
+          "label": "Várzea Grande",
+          "value": "002"
+        },
+        {
+          "label": "Rondonópolis",
+          "value": "003"
+        },
+        {
+          "label": "Sinop",
+          "value": "004"
+        },
+        {
+          "label": "Tangará da Serra",
+          "value": "005"
+        },
+        {
+          "label": "Cáceres",
+          "value": "006"
+        },
+        {
+          "label": "Sorriso",
+          "value": "007"
+        },
+        {
+          "label": "Lucas do Rio Verde",
+          "value": "008"
+        },
+        {
+          "label": "Barra do Garças",
+          "value": "009"
+        },
+        {
+          "label": "Alta Floresta",
+          "value": "010"
+        }
+      ]
+    },
+    {
+      "estado": "PA",
+      "value": [
+        {
+          "label": "Belém",
+          "value": "001"
+        },
+        {
+          "label": "Ananindeua",
+          "value": "002"
+        },
+        {
+          "label": "Santarém",
+          "value": "003"
+        },
+        {
+          "label": "Marabá",
+          "value": "004"
+        },
+        {
+          "label": "Castanhal",
+          "value": "005"
+        },
+        {
+          "label": "Parauapebas",
+          "value": "006"
+        },
+        {
+          "label": "Itaituba",
+          "value": "007"
+        },
+        {
+          "label": "Cametá",
+          "value": "008"
+        },
+        {
+          "label": "Bragança",
+          "value": "009"
+        },
+        {
+          "label": "Abaetetuba",
+          "value": "010"
+        }
+      ]
+    },
+    {
+      "estado": "PB",
+      "value": [
+        {
+          "label": "João Pessoa",
+          "value": "001"
+        },
+        {
+          "label": "Campina Grande",
+          "value": "002"
+        },
+        {
+          "label": "Santa Rita",
+          "value": "003"
+        },
+        {
+          "label": "Patos",
+          "value": "004"
+        },
+        {
+          "label": "Bayeux",
+          "value": "005"
+        },
+        {
+          "label": "Sousa",
+          "value": "006"
+        },
+        {
+          "label": "Cabedelo",
+          "value": "007"
+        },
+        {
+          "label": "Cajazeiras",
+          "value": "008"
+        },
+        {
+          "label": "Guarabira",
+          "value": "009"
+        },
+        {
+          "label": "São Bento",
+          "value": "010"
+        }
+      ]
+    },
+    {
+      "estado": "PE",
+      "value": [
+        {
+          "label": "Recife",
+          "value": "001"
+        },
+        {
+          "label": "Jaboatão dos Guararapes",
+          "value": "002"
+        },
+        {
+          "label": "Olinda",
+          "value": "003"
+        },
+        {
+          "label": "Caruaru",
+          "value": "004"
+        },
+        {
+          "label": "Petrolina",
+          "value": "005"
+        },
+        {
+          "label": "Paulista",
+          "value": "006"
+        },
+        {
+          "label": "Cabo de Santo Agostinho",
+          "value": "007"
+        },
+        {
+          "label": "Camaragibe",
+          "value": "008"
+        },
+        {
+          "label": "Garanhuns",
+          "value": "009"
+        },
+        {
+          "label": "Vitória de Santo Antão",
+          "value": "010"
+        }
+      ]
+    },
+    {
+      "estado": "PI",
+      "value": [
+        {
+          "label": "Teresina",
+          "value": "001"
+        },
+        {
+          "label": "Parnaíba",
+          "value": "002"
+        },
+        {
+          "label": "Picos",
+          "value": "003"
+        },
+        {
+          "label": "Floriano",
+          "value": "004"
+        },
+        {
+          "label": "Piripiri",
+          "value": "005"
+        },
+        {
+          "label": "Campo Maior",
+          "value": "006"
+        },
+        {
+          "label": "Barras",
+          "value": "007"
+        },
+        {
+          "label": "Altos",
+          "value": "008"
+        },
+        {
+          "label": "José de Freitas",
+          "value": "009"
+        },
+        {
+          "label": "Esperantina",
+          "value": "010"
+        }
+      ]
+    },
+    {
+      "estado": "PR",
+      "value": [
+        {
+          "label": "Curitiba",
+          "value": "001"
+        },
+        {
+          "label": "Londrina",
+          "value": "002"
+        },
+        {
+          "label": "Maringá",
+          "value": "003"
+        },
+        {
+          "label": "Ponta Grossa",
+          "value": "004"
+        },
+        {
+          "label": "Cascavel",
+          "value": "005"
+        },
+        {
+          "label": "São José dos Pinhais",
+          "value": "006"
+        },
+        {
+          "label": "Foz do Iguaçu",
+          "value": "007"
+        },
+        {
+          "label": "Colombo",
+          "value": "008"
+        },
+        {
+          "label": "Guarapuava",
+          "value": "009"
+        },
+        {
+          "label": "Paranaguá",
+          "value": "010"
+        }
+      ]
+    },
+    {
+      "estado": "RJ",
+      "value": [
+        {
+          "label": "Rio de Janeiro",
+          "value": "001"
+        },
+        {
+          "label": "São Gonçalo",
+          "value": "002"
+        },
+        {
+          "label": "Duque de Caxias",
+          "value": "003"
+        },
+        {
+          "label": "Nova Iguaçu",
+          "value": "004"
+        },
+        {
+          "label": "Niterói",
+          "value": "005"
+        },
+        {
+          "label": "Belford Roxo",
+          "value": "006"
+        },
+        {
+          "label": "Campos dos Goytacazes",
+          "value": "007"
+        },
+        {
+          "label": "São João de Meriti",
+          "value": "008"
+        },
+        {
+          "label": "Petrópolis",
+          "value": "009"
+        },
+        {
+          "label": "Volta Redonda",
+          "value": "010"
+        }
+      ]
+    },
+    {
+      "estado": "RN",
+      "value": [
+        {
+          "label": "Natal",
+          "value": "001"
+        },
+        {
+          "label": "Mossoró",
+          "value": "002"
+        },
+        {
+          "label": "Parnamirim",
+          "value": "003"
+        },
+        {
+          "label": "São Gonçalo do Amarante",
+          "value": "004"
+        },
+        {
+          "label": "Macaíba",
+          "value": "005"
+        },
+        {
+          "label": "Ceará-Mirim",
+          "value": "006"
+        },
+        {
+          "label": "Caicó",
+          "value": "007"
+        },
+        {
+          "label": "Açu",
+          "value": "008"
+        },
+        {
+          "label": "Currais Novos",
+          "value": "009"
+        },
+        {
+          "label": "Santa Cruz",
+          "value": "010"
+        }
+      ]
+    },
+    {
+      "estado": "RO",
+      "value": [
+        {
+          "label": "Porto Velho",
+          "value": "001"
+        },
+        {
+          "label": "Ji-Paraná",
+          "value": "002"
+        },
+        {
+          "label": "Ariquemes",
+          "value": "003"
+        },
+        {
+          "label": "Vilhena",
+          "value": "004"
+        },
+        {
+          "label": "Cacoal",
+          "value": "005"
+        },
+        {
+          "label": "Rolim de Moura",
+          "value": "006"
+        },
+        {
+          "label": "Jaru",
+          "value": "007"
+        },
+        {
+          "label": "Guajará-Mirim",
+          "value": "008"
+        },
+        {
+          "label": "Machadinho d'Oeste",
+          "value": "009"
+        },
+        {
+          "label": "Buritis",
+          "value": "010"
+        }
+      ]
+    },
+    {
+      "estado": "RR",
+      "value": [
+        {
+          "label": "Boa Vista",
+          "value": "001"
+        },
+        {
+          "label": "Rorainópolis",
+          "value": "002"
+        },
+        {
+          "label": "Caracaraí",
+          "value": "003"
+        },
+        {
+          "label": "São João da Baliza",
+          "value": "004"
+        },
+        {
+          "label": "Mucajaí",
+          "value": "005"
+        },
+        {
+          "label": "Alto Alegre",
+          "value": "006"
+        },
+        {
+          "label": "Pacaraima",
+          "value": "007"
+        },
+        {
+          "label": "Bonfim",
+          "value": "008"
+        },
+        {
+          "label": "Cantá",
+          "value": "009"
+        },
+        {
+          "label": "Normandia",
+          "value": "010"
+        }
+      ]
+    },
+    {
+      "estado": "RS",
+      "value": [
+        {
+          "label": "Porto Alegre",
+          "value": "001"
+        },
+        {
+          "label": "Caxias do Sul",
+          "value": "002"
+        },
+        {
+          "label": "Pelotas",
+          "value": "003"
+        },
+        {
+          "label": "Canoas",
+          "value": "004"
+        },
+        {
+          "label": "Santa Maria",
+          "value": "005"
+        },
+        {
+          "label": "Gravataí",
+          "value": "006"
+        },
+        {
+          "label": "Viamão",
+          "value": "007"
+        },
+        {
+          "label": "Novo Hamburgo",
+          "value": "008"
+        },
+        {
+          "label": "São Leopoldo",
+          "value": "009"
+        },
+        {
+          "label": "Rio Grande",
+          "value": "010"
+        }
+      ]
+    },
+    {
+      "estado": "SC",
+      "value": [
+        {
+          "label": "Florianópolis",
+          "value": "001"
+        },
+        {
+          "label": "Joinville",
+          "value": "002"
+        },
+        {
+          "label": "Blumenau",
+          "value": "003"
+        },
+        {
+          "label": "São José",
+          "value": "004"
+        },
+        {
+          "label": "Chapecó",
+          "value": "005"
+        },
+        {
+          "label": "Criciúma",
+          "value": "006"
+        },
+        {
+          "label": "Itajaí",
+          "value": "007"
+        },
+        {
+          "label": "Jaraguá do Sul",
+          "value": "008"
+        },
+        {
+          "label": "Lages",
+          "value": "009"
+        },
+        {
+          "label": "Palhoça",
+          "value": "010"
+        }
+      ]
+    },
+    {
+      "estado": "SE",
+      "value": [
+        {
+          "label": "Aracaju",
+          "value": "001"
+        },
+        {
+          "label": "Nossa Senhora do Socorro",
+          "value": "002"
+        },
+        {
+          "label": "Lagarto",
+          "value": "003"
+        },
+        {
+          "label": "Itabaiana",
+          "value": "004"
+        },
+        {
+          "label": "Estância",
+          "value": "005"
+        },
+        {
+          "label": "São Cristóvão",
+          "value": "006"
+        },
+        {
+          "label": "Tobias Barreto",
+          "value": "007"
+        },
+        {
+          "label": "Nossa Senhora da Glória",
+          "value": "008"
+        },
+        {
+          "label": "Simão Dias",
+          "value": "009"
+        },
+        {
+          "label": "Poço Redondo",
+          "value": "010"
+        }
+      ]
+    },
+    {
+      "estado": "SP",
+      "value": [
+        {
+          "label": "São Paulo",
+          "value": "001"
+        },
+        {
+          "label": "Guarulhos",
+          "value": "002"
+        },
+        {
+          "label": "Campinas",
+          "value": "003"
+        },
+        {
+          "label": "São Bernardo do Campo",
+          "value": "004"
+        },
+        {
+          "label": "Santo André",
+          "value": "005"
+        },
+        {
+          "label": "Osasco",
+          "value": "006"
+        },
+        {
+          "label": "Ribeirão Preto",
+          "value": "007"
+        },
+        {
+          "label": "Sorocaba",
+          "value": "008"
+        },
+        {
+          "label": "Mauá",
+          "value": "009"
+        },
+        {
+          "label": "São José dos Campos",
+          "value": "010"
+        }
+      ]
+    },
+    {
+      "estado": "TO",
+      "value": [
+        {
+          "label": "Palmas",
+          "value": "001"
+        },
+        {
+          "label": "Araguaína",
+          "value": "002"
+        },
+        {
+          "label": "Gurupi",
+          "value": "003"
+        },
+        {
+          "label": "Porto Nacional",
+          "value": "004"
+        },
+        {
+          "label": "Paraíso do Tocantins",
+          "value": "005"
+        },
+        {
+          "label": "Colinas do Tocantins",
+          "value": "006"
+        },
+        {
+          "label": "Guaraí",
+          "value": "007"
+        },
+        {
+          "label": "Dianópolis",
+          "value": "008"
+        },
+        {
+          "label": "Tocantinópolis",
+          "value": "009"
+        },
+        {
+          "label": "Augustinópolis",
+          "value": "010"
+        }
+      ]
+    }
+  ]
+}

@@ -1,5 +1,5 @@
 import { Button, IconButton } from '@mui/material';
-import React from 'react'
+import React, { useState } from 'react'
 import { Control, FieldValues, useFieldArray, useFormContext } from 'react-hook-form';
 import AppSelect from '../input/AppSelect';
 import AppTextField from '../input/AppTextField';
@@ -7,42 +7,34 @@ import DeleteIcon from '@mui/icons-material/Delete';
 import AppTextFieldController from '../input/AppTextFieldController';
 import { Add } from '@mui/icons-material';
 import AppSelectFieldController from '../input/AppSelectFieldController';
-interface AppAdicionaEspecialidadeProps{
-    nameBase:string;
+import { M_PLUS_1 } from 'next/font/google';
+import AppAdiciona from './AppAdiciona';
+import { ItemSelect } from '../input/model/ItemSelect';
+import useSWR from 'swr';
+import useCustomSWR from '@/presentation/hooks/ConsultaFiltro';
+interface AppAdicionaEspecialidadeProps {
+    nameBase: string;
 }
-const AppAdicionaEspecialidade:React.FC<AppAdicionaEspecialidadeProps> = (props) => {
-    const { control, formState: { errors } } = useFormContext() as { control: Control<FieldValues>, formState: { errors: Record<string, any> } };
-    const { fields, append, remove } = useFieldArray({
-        control,
-        name: props.nameBase// "contato.telefone" // Nome do array no formulário
-    });
+const fetcher = (url: string) => fetch(url).then((res) => res.json());
+const AppAdicionaEspecialidade: React.FC<AppAdicionaEspecialidadeProps> = (props) => {
+    const { data, error } = useCustomSWR<ItemSelect[]>('http://localhost:3001/tipo-especialidade',undefined,{dedupingInterval: 600000});
+    if (error) return <p>Erro ao carregar opções</p>;
+    if (!data) return <p>Carregando...</p>;
+
     return (
+        <AppAdiciona required={true} title='Adicionar Especialidade' nameBase={props.nameBase} component={
+            (index) => {
+                return <>
+                    <div className="lg:col-span-10">
+                        <AppSelectFieldController itens={data} id={`especialidade_${index}`} name={`${props.nameBase}.${index}.id`} label={'Especialidade'} />
+                    </div>
+                </>
+            }
+        } />
 
-        <>
-            <div className='flex w-full'>
-                <Button onClick={() => append({})} className='' fullWidth variant='contained' color='primary' startIcon={<Add />}>Adicionar Especialidade</Button>
-            </div>
-            <div className='flex flex-col gap-2 border border-gray-300 py-3 '>
-                {
-                    fields.map((field, index) => (
-                        <div key={index} className='items-end gap-5 grid lg:grid-cols-12 grid-cols-1  px-3 border-b pb-2 shadow-sm border-gray-300'>
-                            <div className='lg:col-span-1 flex justify-center items-center'>
-                                <IconButton className='text-red-500' onClick={() => remove(fields.findIndex(f => f.id === field.id))} ><DeleteIcon /></IconButton>
-                                {/* <Button className='' fullWidth variant='contained' color='error' startIcon={<DeleteIcon />}>Remover Telefone</Button> */}
-                            </div>
-                            <div className="lg:col-span-10">
-                                <AppSelectFieldController id={`especialidade_${index}`} name={`${props.nameBase}.${index}.id`} label={'Especialidade'}/>
-                                {/* < AppSelect id='tipo_dele' label={"Especialidade"} /> */}
-                            </div>
-                          
-                        </div>
-                    ))
-                }
-
-
-            </div>
-        </>
     )
 }
 
 export default AppAdicionaEspecialidade
+
+

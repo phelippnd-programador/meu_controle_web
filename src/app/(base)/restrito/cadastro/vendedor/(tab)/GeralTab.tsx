@@ -22,6 +22,7 @@ const GeralTab = () => {
             <div className='gap-10 grid lg:grid-cols-2 grid-cols-1'>
                 <AppTextFieldController name={'pessoais.nome'} label={'Nome'} />
                 <AppDateFieldController name={'pessoais.data_nascimento'} label={'Data Nascimento'} />
+                <AppTextFieldController name={'contato.email'} label={'email'} />
 
             </div>
             <div className='grid lg:grid-cols-2 grid-cols-1 gap-2'>

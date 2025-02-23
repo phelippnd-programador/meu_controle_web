@@ -23,7 +23,14 @@ const CadastroPage: React.FC<CadastroDialogProps> = ({ setOpen }) => {
   const form = useForm<TypeSchemaCadastro>({ resolver: zodResolver(schemaCadastro) });
   const onSubmit = (data: TypeSchemaCadastro) => {
     console.log("Dados",JSON.stringify(data));
-  }
+    fetch("http://localhost:3001/funcionario", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(data),
+    })
+   }
   const handleTabChange = (event: React.ChangeEvent<{}>, newIndex: number) => {
     console.log("INdex nov", newIndex);
     setTabIndex(newIndex);
@@ -31,7 +38,7 @@ const CadastroPage: React.FC<CadastroDialogProps> = ({ setOpen }) => {
   return (
     <div className='flex flex-col gap-5 '>
       <FormProvider {...form}>
-        <form onSubmit={form.handleSubmit(onSubmit)} >
+        <form onSubmit={form.handleSubmit(onSubmit,(errors) => console.log("Erros encontrados:", errors))} >
           
           <AppTitle title='Novo Funcionario' />
           <AppBar position="static" className="bg-blue-600">

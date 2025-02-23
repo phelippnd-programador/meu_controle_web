@@ -1,7 +1,7 @@
 import { DiaSemana, TipoDocumento, TipoResidencia, TipoTelefone } from "@/presentation/types/enums";
 import dayjs from "dayjs";
 import { array, z } from "zod";
-
+const isDayjsObject = (val: any): val is dayjs.Dayjs => dayjs.isDayjs(val);
 export const schemaCadastro = z.object({
   endereco: z.object({
     cep: z.string()
@@ -26,25 +26,35 @@ export const schemaCadastro = z.object({
 
     cidade: z.string()
       .nonempty({ message: "Cidade é obrigatória" })
-      .min(3, { message: "Cidade deve conter no mínimo 3 caracteres" }),
-
+    ,
     estado: z.string()
-      .length(2, { message: "Estado deve conter 2 caracteres" })
-      .regex(/^[A-Z]{2}$/, { message: "Estado deve conter apenas letras maiúsculas" }),
+      .nonempty({ message: "Estado é obrigatória" }),
 
     ponto_referencia: z.string()
       .optional(),
 
-    tipo_residencia: z.string().refine((value) => Object.keys(TipoResidencia).includes(value), {
-      message: 'Tipo da residência inválida'
-    }),
+    tipo_residencia: z.string().nonempty({ message: "Tipo de residencia é obrigatória" }),
   }),
   "pessoais": z.object({
     "nome": z.string().nonempty({ message: "Nome é obrigatório" }).min(3, { message: "Nome deve conter no mínimo 3 caracteres" }),
-    "data_nascimento": z.string()
-    .refine((val) => dayjs(val).isValid(), {
-      message: "Data de nascimento inválida"
+    "data_nascimento":  z
+    .custom(isDayjsObject, {
+      message: 'O valor deve ser um objeto Dayjs',
     })
+    .transform((val) => {
+      if (typeof val === 'string' || typeof val === 'number' || dayjs.isDayjs(val)) {
+        return dayjs(val).format("DD/MM/YYYY");
+      }
+      throw new Error("Valor inválido para data");
+    })
+    .refine((val) => dayjs(val, "DD/MM/YYYY", true).isValid(), {
+      message: "Data inválida (formato esperado: DD/MM/YYYY)",
+    }),
+
+    // .optional()
+    // .refine((val) => dayjs(val).isValid(), {
+    //   message: "Data de nascimento inválida"
+    // })
     // .refine((val) => {
     //   const minDate = new Date();
     //   minDate.setFullYear(minDate.getFullYear() - 18);
@@ -66,13 +76,11 @@ export const schemaCadastro = z.object({
         .nonempty({ message: "Telefone é obrigatório" })
         .min(8, { message: "Telefone deve conter no mínimo 8 caracteres" })
         .max(9, { message: "Telefone deve conter no máximo 9 caracteres" }),
-      "tipo":  z.string().refine((value)=>Object.keys(TipoTelefone).includes(value),{
-        message:"Tipo de Telefone Incorreto"
-      })  // z.nativeEnum(TipoTelefone, { message: "Tipo de telefone é obrigatório" }),
+      "tipo": z.string()  // z.nativeEnum(TipoTelefone, { message: "Tipo de telefone é obrigatório" }),
     })).min(1, { message: "Telefone é obrigatório" }),
   }),
   "especialidades": z.array(z.object({
-    "id": z.number({message:"Selecione um item"}),
+    "id": z.string({ message: "Selecione um item" }),
   })),
   "horarios": z.array(z.object({
     "diasSemana": z.string()
