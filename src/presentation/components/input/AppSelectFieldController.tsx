@@ -1,5 +1,5 @@
 'use client'
-import { TextField, TextFieldProps } from '@mui/material'
+import { Skeleton, TextField, TextFieldProps } from '@mui/material'
 import React, { useEffect } from 'react'
 import { Control, Controller, FieldValues, useFormContext } from 'react-hook-form'
 import AppTextField from './AppTextField';
@@ -36,6 +36,8 @@ interface AppSelectFieldControllerProps {
   type?: string;
   className?: string;
   itens?: ItemSelect | ItemSelect[];
+  isLoaded?: boolean;
+
 }
 
 const AppSelectFieldController: React.FC<AppSelectFieldControllerProps> = (props) => {
@@ -60,6 +62,7 @@ const AppSelectFieldController: React.FC<AppSelectFieldControllerProps> = (props
       control={control}
       defaultValue=""
       render={({ field }) =>
+          props.isLoaded? <Skeleton className="h-10 w-full" />:
         <>
           <AppSelect
             {...field}

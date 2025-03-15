@@ -11,11 +11,9 @@ const options: NextAuthOptions = {
             },
             authorize: async (credentials) => {
                 // Implementação da lógica de autenticação
-                console.log("Chegei");
                 const user = { id: 1, name: 'User', email: 'phelippnd@gmail.com' }; // Exemplo de usuário fictício
 
                 if (user) {
-                    console.log("user", user);
                     return Promise.resolve(user as any);
                 } else {
                     return Promise.resolve(null);

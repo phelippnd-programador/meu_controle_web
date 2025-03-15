@@ -3,6 +3,7 @@ import { Icon, ListItem, ListItemIcon, ListItemText, Tooltip } from "@mui/materi
 import Link from "next/link";
 import React from 'react';
 import * as Icons from '@mui/icons-material';
+import { useFlags } from "@/presentation/hooks/FlagProvider";
 interface ItemMenuProps {
     href: string;
     title: string;
@@ -10,10 +11,11 @@ interface ItemMenuProps {
     icon: keyof typeof Icons;
 }
 const ItemMenu: React.FC<ItemMenuProps> = ({ href, title, icon,tooltip }) => {
+    const {clearAllFlags}=useFlags();
     const IconComponent = Icons[icon];
     return (
         <>
-        <Tooltip  placement="top" title={tooltip} arrow>
+        <Tooltip onClick={()=>clearAllFlags()} placement="top" title={tooltip} arrow>
             <ListItem className='hover:bg-black ' component={Link} href={href}>
                 <ListItemIcon className='text-yellow-50' >
                     <IconComponent />

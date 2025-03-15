@@ -60,6 +60,9 @@ const AppDateFieldController: React.FC<AppDateFieldControllerProps> = (props) =>
           {/* <AppTimeField name={'de'} label={'De'} /> */}
           <AppDataField
             {...field}
+            value={field.value ? dayjs(field.value, "DD/MM/YYYY") : null} // 🔥 Converte corretamente!
+            onChange={(newValue) => field.onChange(newValue ? newValue.format("DD/MM/YYYY") : '')} // Mantém o formato correto
+          
             // value={field.value ? dayjs(field.value, 'dd/MM/yyyy') : null} // Converte para Dayjs
             // onChange={(newValue) => field.onChange(newValue ? dayjs(newValue).format('dd/MM/yyyy') : '')} // Converte para string
         

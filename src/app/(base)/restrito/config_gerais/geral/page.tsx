@@ -11,7 +11,6 @@ const page = () => {
   });
 
   const onSubmit = (data: any) => {
-    console.log(data);
     // Aqui você pode integrar a lógica para emitir NFe com os dados do produto
   };
   const handleChange = (event: React.ChangeEvent<{}>, newIndex: number) => {

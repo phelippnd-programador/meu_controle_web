@@ -3,7 +3,7 @@ import { useFlags } from '@/presentation/hooks/FlagProvider';
 import { Button, Paper, Table, TableBody, TableCell, TableContainer, TableHead, TablePagination, TableRow } from '@mui/material'
 import React, { useState } from 'react'
 interface ResultadoFiltroProps {
-    setId: (id: string) => void;
+    setIdUsuario: (id: string) => void;
     dados: any[] | undefined;
 }
 const ResultadoFiltro: React.FC<ResultadoFiltroProps> = (props) => {
@@ -29,7 +29,7 @@ const ResultadoFiltro: React.FC<ResultadoFiltroProps> = (props) => {
                 className="hover:cursor-pointer"
                 key={row.id}
                 onClick={() => {
-                  props.setId(row.id);
+                  props.setIdUsuario(row.id);
                   setFlag('openCadastroFuncionario', true);
                 }}
               >

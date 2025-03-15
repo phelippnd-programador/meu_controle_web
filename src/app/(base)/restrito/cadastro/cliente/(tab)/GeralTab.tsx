@@ -1,48 +1,46 @@
+import AppAdicionaCargaHoraria from '@/presentation/components/botao_adicionar/AppAdicionaCargaHoraria'
+import AppAdicionaEspecialidade from '@/presentation/components/botao_adicionar/AppAdicionaEspecialidade'
+import AppDateFieldController from '@/presentation/components/input/AppDateFieldController'
 import AppSelect from '@/presentation/components/input/AppSelect'
-import DeleteIcon from '@mui/icons-material/Delete';
 import AppTextField from '@/presentation/components/input/AppTextField'
 import AppTextFieldController from '@/presentation/components/input/AppTextFieldController'
-import { Add, Apps, PlusOne, PlusOneSharp } from '@mui/icons-material'
-import { Button, IconButton } from '@mui/material'
+import AppAdicionaTelefone from '@/presentation/components/botao_adicionar/AppAdicionaTelefone'
+import { Add } from '@mui/icons-material'
+import { Button } from '@mui/material'
 import React from 'react'
-import { useFieldArray, useFormContext } from 'react-hook-form';
-import AppAdicionaTelefone from '@/presentation/components/botao_adicionar/AppAdicionaTelefone';
+import { useFieldArray, useFormContext } from 'react-hook-form'
+import AppSelectFieldController from '@/presentation/components/input/AppSelectFieldController'
+import { ItemSelect } from '@/presentation/components/input/model/ItemSelect'
+import { useCustomSWR } from '@/presentation/hooks/ConsultaFiltro'
+interface GeralTabProps {
+    isDataLoaded?: boolean;
+}
+const GeralTab: React.FC<GeralTabProps> = ({ isDataLoaded }) => {
 
-const GeralTab = () => {
-    const { control } = useFormContext();
-    const { fields, append, remove } = useFieldArray({
-        control,
-        name: "contato.telefone" // Nome do array no formulário
-    });
+    if (!isDataLoaded) return <p>Carregando...</p>;
+    const { data: dataTipoCatedoriaFornecedor, error: errorTipoCatedoriaFornecedor } = useCustomSWR<ItemSelect[]>('http://localhost:3001/tipo-categoria-fornecedor', undefined, { dedupingInterval: 600000 });
+
     return (
         <div className='flex flex-col w-full gap-5'>
-            <AppSelect id='tipo_pessoa' label='Tipo de pessoa' />
-            <div className='gap-10 grid lg:grid-cols-2 grid-cols-1'>
-                <AppTextFieldController label={"Nome"} name={'pessoais.nome'} />
-                <AppTextFieldController label={"Apelido"} name={'pessoais.apelido'} />
 
-            </div>
-            <div className='gap-10 grid lg:grid-cols-2 grid-cols-1'>
-                <AppTextField label={"CPF"} />
-                <AppTextField label={"RG"} />
-
-            </div>
-            <div className='gap-10 grid lg:grid-cols-2 grid-cols-1'>
-                <AppTextFieldController label={"E-mail"} name={'contato.email'} />
-                <AppTextFieldController label={"Data Nascimento"} name={'pessoais.data_nascimento'} />
-
-            </div>
-            <div className='p-0'>
-                <div className='flex w-full'>
-                    <Button onClick={()=>append({})} className='' fullWidth variant='contained' color='primary' startIcon={<Add />}>Adicionar Telefone</Button>
+            <div className='gap-10 grid lg:grid-cols-12 grid-cols-1'>
+                <div className='col-span-9'>
+                    <AppTextFieldController name={'pessoais.nome'} label={'Nome'} />
                 </div>
-                <AppAdicionaTelefone/>          
-
+                <div className='col-span-3'>
+                    <AppTextFieldController name={'pessoais.cpf'} label={'CPF'} />
+                </div>
             </div>
-            {/* <div className='gap-10 grid lg:grid-cols-2 grid-cols-1'>
-                <AppSelect label={"Apelido"}/>
-                <AppSelect label={"Celular"}/>
-            </div> */}
+            <div className='gap-10 grid lg:grid-cols-12 grid-cols-1'>
+                <div className='col-span-7'>
+                    <AppTextFieldController name={'contato.email'} label={'E-mail'} />
+                </div>
+                <div className='col-span-5'>
+                    <AppDateFieldController name={'pessoais.data_nascimento'} label={'Data Nascimento'} />
+                </div>
+            </div>
+            <AppAdicionaTelefone nameBase={'contato.telefone'} />
+
         </div>
     )
 }

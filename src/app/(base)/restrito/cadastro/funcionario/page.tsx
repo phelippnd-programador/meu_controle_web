@@ -8,27 +8,28 @@ import Tab from '@/presentation/components/tab/Tab'
 import CadastroPage from './(paginas)/CadastroPage'
 import { TypeSchemaCadastro } from './model/schemaModel'
 import { FlagProvider, useFlags } from '@/presentation/hooks/FlagProvider'
-import { TypeTabelaFornecedor, TypeTabelaFuncionario } from '@/presentation/types'
+import { TypeTabelaFuncionario } from '@/presentation/types'
 
 const page = () => {
-    const [idFornecedor, setIdFornecedor] = useState<string | undefined>('3372');
-    const [resultPsquisa,setResultPsquisa]  = useState<TypeTabelaFornecedor[]|undefined>(); 
-    const { flags } = useFlags();
-    if (flags['openCadastroFornecedor'] !== undefined &&flags['openCadastroFornecedor']===true) {
-        return <CadastroPage idFuncionario={idFornecedor}/>
+    const [openCadastro, setOpenCadastro] = useState<boolean>(false);
+    const [idUsuario, setIdUsuario] = useState<string | undefined>('3372');
+    const [resultPsquisa,setResultPsquisa]  = useState<TypeTabelaFuncionario[]|undefined>(); 
+    const { setFlag, flags } = useFlags();
+    if (flags['openCadastroFuncionario'] !== undefined &&flags['openCadastroFuncionario']===true) {
+        return <CadastroPage idFuncionario={idUsuario}/>
     }
     return (
         <div>
 
-            <AppTitle title='Fornecedor' />
+            <AppTitle title='Funcionario' />
             <div className="content">
                 <div className="filter">
-                    <FiltroConsulta setDataFiltro={(data:TypeTabelaFornecedor[]|undefined)=>{
+                    <FiltroConsulta setDataFiltro={(data:TypeTabelaFuncionario[]|undefined)=>{
                         setResultPsquisa(data);
-                    }} onOpenNovo={() => {setIdFornecedor(undefined) }} />
+                    }} onOpenNovo={() => {setIdUsuario(undefined) }} />
                 </div>
                 <div className="result">
-                    <ResultadoFiltro dados={resultPsquisa} setId={(id) => setIdFornecedor(id)} />
+                    <ResultadoFiltro dados={resultPsquisa} setIdUsuario={(id) => setIdUsuario(id)} />
                 </div>
             </div>
         </div>

@@ -9,8 +9,9 @@ type AppSelectProps = SelectProps & {
     name?: string;
     itens?: ItemSelect | ItemSelect[];
     helperText?:string;
+    error?:boolean;
 }
-const AppSelect: React.FC<AppSelectProps> = (props) => {
+const AppSelect: React.FC<AppSelectProps> = ({helperText,...props}) => {
     return (
         <FormControl className='m-0 p-0' fullWidth error={props.error}>
             <InputLabel id={props.id}>{props.label}</InputLabel>
@@ -32,7 +33,7 @@ const AppSelect: React.FC<AppSelectProps> = (props) => {
                     <MenuItem value={props.itens?.value} >{props.itens?.label}</MenuItem>
                 )}
             </Select>
-            {props.error && <FormHelperText className='mx-0' >{props.helperText}</FormHelperText>}
+            {props.error && <FormHelperText className='mx-0' >{helperText}</FormHelperText>}
         </FormControl>
     )
 }

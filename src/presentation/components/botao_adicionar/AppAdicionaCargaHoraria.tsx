@@ -22,8 +22,6 @@ const AppAdicionaCargaHoraria: React.FC<AppAdicionaCargaHorariaProps> = (props) 
         name: props.nameBase // Nome do array no formulário
     });
     return (
-
-
         <AppAdiciona required={true} title='Adicionar Especialidade' nameBase={props.nameBase} component={
             (index) => {
                 return <>

@@ -11,7 +11,7 @@ import { M_PLUS_1 } from 'next/font/google';
 import AppAdiciona from './AppAdiciona';
 import { ItemSelect } from '../input/model/ItemSelect';
 import useSWR from 'swr';
-import useCustomSWR from '@/presentation/hooks/ConsultaFiltro';
+import {useCustomSWR} from '@/presentation/hooks/ConsultaFiltro';
 interface AppAdicionaEspecialidadeProps {
     nameBase: string;
 }
@@ -19,14 +19,12 @@ const fetcher = (url: string) => fetch(url).then((res) => res.json());
 const AppAdicionaEspecialidade: React.FC<AppAdicionaEspecialidadeProps> = (props) => {
     const { data, error } = useCustomSWR<ItemSelect[]>('http://localhost:3001/tipo-especialidade',undefined,{dedupingInterval: 600000});
     if (error) return <p>Erro ao carregar opções</p>;
-    if (!data) return <p>Carregando...</p>;
-
     return (
-        <AppAdiciona required={true} title='Adicionar Especialidade' nameBase={props.nameBase} component={
+        <AppAdiciona isloaded={!data} required={true} title='Adicionar Especialidade' nameBase={props.nameBase} component={
             (index) => {
                 return <>
-                    <div className="lg:col-span-10">
-                        <AppSelectFieldController itens={data} id={`especialidade_${index}`} name={`${props.nameBase}.${index}.id`} label={'Especialidade'} />
+                    <div className="lg:col-span-10" key={index}>
+                        <AppSelectFieldController itens={data} id={`especialidades_${index}`} name={`${props.nameBase}.${index}.id`} label={'Especialidade'} />
                     </div>
                 </>
             }

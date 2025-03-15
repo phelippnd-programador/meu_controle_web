@@ -1,19 +1,22 @@
 'use client'
+import ImageUpload from '@/presentation/components/imagem/ImageUpload'
+import AppSelectColor from '@/presentation/components/input/AppSelectColor'
+import AppTextField from '@/presentation/components/input/AppTextField'
 import AppTitle from '@/presentation/components/title/AppTitle'
-import { AppBar, Button, Dialog, DialogContent, Divider, Tabs } from '@mui/material'
+import { AppBar, Button, Dialog, DialogContent, Divider,  Tabs } from '@mui/material'
 import React, { useEffect, useState } from 'react'
 import GeralTab from '../(tab)/GeralTab'
 import TabPanel from '../../produto/(tabs)/TabPanel'
 import FooterButtonTabs from '@/presentation/components/footer/FooterButtonTabs'
 import { FieldErrors, FormProvider, useForm } from 'react-hook-form'
 import { zodResolver } from '@hookform/resolvers/zod'
+import AppTextFieldController from '@/presentation/components/input/AppTextFieldController'
 import { schemaCadastro, TypeSchemaCadastro } from '../model/schemaModel'
+import CargaHorariaTab from '../(tab)/CargaHorariaTab'
 import { useAlert } from '@/presentation/components/provider/AlertProvider'
-import { useCustomSWR } from '@/presentation/hooks/ConsultaFiltro'
+import {useCustomSWR} from '@/presentation/hooks/ConsultaFiltro'
 import { useFlags } from '@/presentation/hooks/FlagProvider'
-import RepresentateTab from '../(tab)/RepresentateTab'
 import Tab from '@/presentation/components/tab/Tab'
-import DadosFinaiceiroTab from '../(tab)/DadosFinaiceiroTab'
 import EnderecoTab from '@/presentation/components/tab/EnderecoTab'
 interface CadastroDialogProps {
   idFuncionario?: string;
@@ -37,7 +40,7 @@ const CadastroPage: React.FC<CadastroDialogProps> = ({  idFuncionario }) => {
 
   const onSubmit = (data: TypeSchemaCadastro) => {
     console.log("Dados", JSON.stringify(data));
-    fetch("http://localhost:3001/fornecedor", {
+    fetch("http://localhost:3001/funcionario", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -54,7 +57,7 @@ const CadastroPage: React.FC<CadastroDialogProps> = ({  idFuncionario }) => {
         .catch((error) => {
           showAlert("Erro ao cadastrar funcionário", "error");
         });
-    setFlag('openCadastroFornecedor',false);
+    setFlag('openCadastroFuncionario',false);
     
   }
   const alertError = (error: FieldErrors) => {
@@ -74,7 +77,6 @@ const CadastroPage: React.FC<CadastroDialogProps> = ({  idFuncionario }) => {
       return messages;
     };
     const messages = extractMessages(error);
-    console.log(error);
     if (messages.length > 0) {
       showAlert(messages[0], "error");
     }
@@ -91,14 +93,12 @@ const CadastroPage: React.FC<CadastroDialogProps> = ({  idFuncionario }) => {
             alertError
           )} >
 
-            <AppTitle title='Novo Fornecedor' />
+            <AppTitle title='Novo Funcionario' />
             <AppBar position="static" className="bg-blue-600">
               <Tabs value={tabIndex} onChange={handleTabChange} className="text-white">
-               
                 <Tab tabIndex={tabIndex} label={`Informações Gerais`} />
                 <Tab tabIndex={tabIndex} label="Informações Endereço" />
-                <Tab tabIndex={tabIndex} label="Informações Representantes" />
-                <Tab tabIndex={tabIndex} label="Dados Financeiros" />
+                <Tab tabIndex={tabIndex} label="Carga Horária" />
               </Tabs>
             </AppBar>
 
@@ -109,10 +109,7 @@ const CadastroPage: React.FC<CadastroDialogProps> = ({  idFuncionario }) => {
               <EnderecoTab isDataLoaded={isDataLoaded || idFuncionario===undefined} />
             </TabPanel>
             <TabPanel value={tabIndex} index={2}>
-              <RepresentateTab isDataLoaded={isDataLoaded || idFuncionario===undefined}/>
-            </TabPanel>
-            <TabPanel value={tabIndex} index={3}>
-              <DadosFinaiceiroTab isDataLoaded={isDataLoaded || idFuncionario===undefined}/>
+              <CargaHorariaTab isDataLoaded={isDataLoaded || idFuncionario===undefined}/>
             </TabPanel>
 
             <FooterButtonTabs />

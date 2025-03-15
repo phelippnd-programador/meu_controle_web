@@ -15,7 +15,6 @@ const AppDataField: React.FC<AppDataFieldProps> = (props) => {
     <MobileDatePicker
       {...props}
       className='w-full'
-      // onChange={(event)=>{ console.log("Evento Date",event)}}
       slotProps={{
         textField: {
           InputProps: {

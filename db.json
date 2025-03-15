@@ -1,4 +1,37 @@
 {
+  "cliente":[],
+  "fornecedor": [
+    {
+      "id": "3372",
+      "endereco": {
+        "cep": "25901550",
+        "logradouro": "Rua Ministro Aliomar Baleieiro",
+        "numero": "101",
+        "complemento": "",
+        "bairro": "111",
+        "cidade": "001",
+        "estado": "RJ",
+        "ponto_referencia": "",
+        "tipo_residencia": "1"
+      },
+      "dados": {
+        "nome_fantasia": "Phelipp Nascimento Damasceno",
+        "categoria": "1",
+        "cnpj": "11111111111111",
+        "descricao": "1111"
+      },
+      "contato_empresa": {
+        "email": "phelippnd@gmail.com",
+        "telefone": [
+          {
+            "ddd": "21",
+            "numero": "987599613",
+            "tipo": "3"
+          }
+        ]
+      }
+    }
+  ],
   "funcionario": [
     {
       "id": "3372",
@@ -14,7 +47,7 @@
         "tipo_residencia": "1"
       },
       "pessoais": {
-        "nome": "Riane Alves",
+        "nome": "Phelipp",
         "data_nascimento": "24/02/2025"
       },
       "contato": {
@@ -41,204 +74,269 @@
       ]
     },
     {
-      "id": "badc",
-      "endereco": {
-        "cep": "25901550",
-        "logradouro": "Rua Ministro Aliomar Baleieiro",
-        "numero": "101",
-        "complemento": "",
-        "bairro": "111",
-        "cidade": "001",
-        "estado": "RJ",
-        "ponto_referencia": "",
-        "tipo_residencia": "1"
-      },
-      "pessoais": {
-        "nome": "Riane Alves",
-        "data_nascimento": "24/02/2025"
-      },
-      "contato": {
-        "email": "phelippnd@gmail.com",
-        "telefone": [
-          {
-            "ddd": "21",
-            "numero": "987599613",
-            "tipo": "1"
-          }
-        ]
-      },
-      "especialidades": [
-        {
-          "id": "1"
-        }
-      ],
-      "horarios": [
-        {
-          "diasSemana": "SEG",
-          "de": "12:00",
-          "ate": "12:56"
-        }
-      ]
+      "id": "894e"
     }
   ],
   "tipo-especialidade": [
     {
       "label": "Cabelereira",
-      "value": "1"
+      "value": "1",
+      "id": "d32a"
     },
     {
       "label": "Manicure",
-      "value": "2"
+      "value": "2",
+      "id": "f34b"
+    }
+  ],
+  "tipo-conta-bancaria": [
+    {
+      "label": "Conta Corrente",
+      "value": "1",
+      "id": "d32a"
+    },
+    {
+      "label": "Conta Poupança",
+      "value": "2",
+      "id": "f34b"
+    },
+    {
+      "label": "PIX",
+      "value": "3",
+      "id": "f34b"
+    }
+  ],
+  "tipo-categoria-fornecedor": [
+    {
+      "label": "shampoo",
+      "value": "1",
+      "id": "9684"
+    },
+    {
+      "label": "condicionador",
+      "value": "2",
+      "id": "6ab3"
+    },
+    {
+      "label": "mascara",
+      "value": "3",
+      "id": "f914"
+    },
+    {
+      "label": "finalizador",
+      "value": "4",
+      "id": "31bb"
+    },
+    {
+      "label": "coloração",
+      "value": "5",
+      "id": "4165"
+    },
+    {
+      "label": "alisamento",
+      "value": "6",
+      "id": "4165"
+    },
+    {
+      "label": "tratamento",
+      "value": "7",
+      "id": "4165"
+    },
+    {
+      "label": "acessorios",
+      "value": "8",
+      "id": "4165"
+    },
+    {
+      "label": "outros",
+      "value": "9",
+      "id": "4165"
     }
   ],
   "tipo-telefone": [
     {
       "label": "Residencial",
-      "value": "1"
+      "value": "1",
+      "id": "9684"
     },
     {
       "label": "Comercial",
-      "value": "2"
+      "value": "2",
+      "id": "6ab3"
     },
     {
       "label": "Celular",
-      "value": "3"
+      "value": "3",
+      "id": "f914"
     },
     {
       "label": "Fixo",
-      "value": "4"
+      "value": "4",
+      "id": "31bb"
     },
     {
       "label": "Whatsapp",
-      "value": "5"
+      "value": "5",
+      "id": "4165"
     }
   ],
   "tipo-residencia": [
     {
       "label": "Casa",
-      "value": "1"
+      "value": "1",
+      "id": "84d0"
     },
     {
       "label": "Apartamento",
-      "value": "2"
+      "value": "2",
+      "id": "029e"
     },
     {
       "label": "Comercial",
-      "value": "3"
+      "value": "3",
+      "id": "c3c9"
     },
     {
       "label": "Outros",
-      "value": "4"
+      "value": "4",
+      "id": "b0e0"
     }
   ],
   "tipo-estado": [
     {
       "label": "Acre",
-      "value": "AC"
+      "value": "AC",
+      "id": "73db"
     },
     {
       "label": "Alagoas",
-      "value": "AL"
+      "value": "AL",
+      "id": "cc76"
     },
     {
       "label": "Amapá",
-      "value": "AP"
+      "value": "AP",
+      "id": "f99a"
     },
     {
       "label": "Amazonas",
-      "value": "AM"
+      "value": "AM",
+      "id": "48f9"
     },
     {
       "label": "Bahia",
-      "value": "BA"
+      "value": "BA",
+      "id": "1432"
     },
     {
       "label": "Ceará",
-      "value": "CE"
+      "value": "CE",
+      "id": "659b"
     },
     {
       "label": "Distrito Federal",
-      "value": "DF"
+      "value": "DF",
+      "id": "0743"
     },
     {
       "label": "Espírito Santo",
-      "value": "ES"
+      "value": "ES",
+      "id": "e38a"
     },
     {
       "label": "Goiás",
-      "value": "GO"
+      "value": "GO",
+      "id": "8aec"
     },
     {
       "label": "Maranhão",
-      "value": "MA"
+      "value": "MA",
+      "id": "787f"
     },
     {
       "label": "Mato Grosso",
-      "value": "MT"
+      "value": "MT",
+      "id": "5d41"
     },
     {
       "label": "Mato Grosso do Sul",
-      "value": "MS"
+      "value": "MS",
+      "id": "0419"
     },
     {
       "label": "Minas Gerais",
-      "value": "MG"
+      "value": "MG",
+      "id": "7019"
     },
     {
       "label": "Pará",
-      "value": "PA"
+      "value": "PA",
+      "id": "1fd6"
     },
     {
       "label": "Paraíba",
-      "value": "PB"
+      "value": "PB",
+      "id": "9080"
     },
     {
       "label": "Paraná",
-      "value": "PR"
+      "value": "PR",
+      "id": "e0f3"
     },
     {
       "label": "Pernambuco",
-      "value": "PE"
+      "value": "PE",
+      "id": "7c27"
     },
     {
       "label": "Piauí",
-      "value": "PI"
+      "value": "PI",
+      "id": "290c"
     },
     {
       "label": "Rio de Janeiro",
-      "value": "RJ"
+      "value": "RJ",
+      "id": "5876"
     },
     {
       "label": "Rio Grande do Norte",
-      "value": "RN"
+      "value": "RN",
+      "id": "888e"
     },
     {
       "label": "Rio Grande do Sul",
-      "value": "RS"
+      "value": "RS",
+      "id": "64ef"
     },
     {
       "label": "Rondônia",
-      "value": "RO"
+      "value": "RO",
+      "id": "0663"
     },
     {
       "label": "Roraima",
-      "value": "RR"
+      "value": "RR",
+      "id": "f215"
     },
     {
       "label": "Santa Catarina",
-      "value": "SC"
+      "value": "SC",
+      "id": "c595"
     },
     {
       "label": "São Paulo",
-      "value": "SP"
+      "value": "SP",
+      "id": "d22f"
     },
     {
       "label": "Sergipe",
-      "value": "SE"
+      "value": "SE",
+      "id": "1146"
     },
     {
       "label": "Tocantins",
-      "value": "TO"
+      "value": "TO",
+      "id": "4095"
     }
   ],
   "tipo-municipio": [
@@ -285,7 +383,8 @@
           "label": "Marechal Thaumaturgo",
           "value": "010"
         }
-      ]
+      ],
+      "id": "6e9a"
     },
     {
       "estado": "AL",
@@ -330,7 +429,8 @@
           "label": "Marechal Deodoro",
           "value": "010"
         }
-      ]
+      ],
+      "id": "998b"
     },
     {
       "estado": "AM",
@@ -375,7 +475,8 @@
           "label": "Humaitá",
           "value": "010"
         }
-      ]
+      ],
+      "id": "0cf9"
     },
     {
       "estado": "AP",
@@ -420,7 +521,8 @@
           "label": "Calçoene",
           "value": "010"
         }
-      ]
+      ],
+      "id": "c5b5"
     },
     {
       "estado": "BA",
@@ -465,7 +567,8 @@
           "label": "Barreiras",
           "value": "010"
         }
-      ]
+      ],
+      "id": "25ff"
     },
     {
       "estado": "CE",
@@ -510,7 +613,8 @@
           "label": "Quixadá",
           "value": "010"
         }
-      ]
+      ],
+      "id": "7dab"
     },
     {
       "estado": "DF",
@@ -519,7 +623,8 @@
           "label": "Brasília",
           "value": "001"
         }
-      ]
+      ],
+      "id": "90ff"
     },
     {
       "estado": "ES",
@@ -564,7 +669,8 @@
           "label": "Cachoeiro de Itapemirim",
           "value": "010"
         }
-      ]
+      ],
+      "id": "d1ec"
     },
     {
       "estado": "GO",
@@ -609,7 +715,8 @@
           "label": "Novo Gama",
           "value": "010"
         }
-      ]
+      ],
+      "id": "a84f"
     },
     {
       "estado": "MA",
@@ -654,7 +761,8 @@
           "label": "Codó",
           "value": "010"
         }
-      ]
+      ],
+      "id": "b47f"
     },
     {
       "estado": "MG",
@@ -699,7 +807,8 @@
           "label": "Ipatinga",
           "value": "010"
         }
-      ]
+      ],
+      "id": "8c11"
     },
     {
       "estado": "MS",
@@ -744,7 +853,8 @@
           "label": "Nova Andradina",
           "value": "010"
         }
-      ]
+      ],
+      "id": "333d"
     },
     {
       "estado": "MT",
@@ -789,7 +899,8 @@
           "label": "Alta Floresta",
           "value": "010"
         }
-      ]
+      ],
+      "id": "4066"
     },
     {
       "estado": "PA",
@@ -834,7 +945,8 @@
           "label": "Abaetetuba",
           "value": "010"
         }
-      ]
+      ],
+      "id": "c9fe"
     },
     {
       "estado": "PB",
@@ -879,7 +991,8 @@
           "label": "São Bento",
           "value": "010"
         }
-      ]
+      ],
+      "id": "24f2"
     },
     {
       "estado": "PE",
@@ -924,7 +1037,8 @@
           "label": "Vitória de Santo Antão",
           "value": "010"
         }
-      ]
+      ],
+      "id": "fb4a"
     },
     {
       "estado": "PI",
@@ -969,7 +1083,8 @@
           "label": "Esperantina",
           "value": "010"
         }
-      ]
+      ],
+      "id": "9d69"
     },
     {
       "estado": "PR",
@@ -1014,7 +1129,8 @@
           "label": "Paranaguá",
           "value": "010"
         }
-      ]
+      ],
+      "id": "5d6d"
     },
     {
       "estado": "RJ",
@@ -1059,7 +1175,8 @@
           "label": "Volta Redonda",
           "value": "010"
         }
-      ]
+      ],
+      "id": "2202"
     },
     {
       "estado": "RN",
@@ -1104,7 +1221,8 @@
           "label": "Santa Cruz",
           "value": "010"
         }
-      ]
+      ],
+      "id": "ab95"
     },
     {
       "estado": "RO",
@@ -1149,7 +1267,8 @@
           "label": "Buritis",
           "value": "010"
         }
-      ]
+      ],
+      "id": "8db5"
     },
     {
       "estado": "RR",
@@ -1194,7 +1313,8 @@
           "label": "Normandia",
           "value": "010"
         }
-      ]
+      ],
+      "id": "1b4c"
     },
     {
       "estado": "RS",
@@ -1239,7 +1359,8 @@
           "label": "Rio Grande",
           "value": "010"
         }
-      ]
+      ],
+      "id": "9898"
     },
     {
       "estado": "SC",
@@ -1284,7 +1405,8 @@
           "label": "Palhoça",
           "value": "010"
         }
-      ]
+      ],
+      "id": "9c30"
     },
     {
       "estado": "SE",
@@ -1329,7 +1451,8 @@
           "label": "Poço Redondo",
           "value": "010"
         }
-      ]
+      ],
+      "id": "60d9"
     },
     {
       "estado": "SP",
@@ -1374,7 +1497,8 @@
           "label": "São José dos Campos",
           "value": "010"
         }
-      ]
+      ],
+      "id": "0bca"
     },
     {
       "estado": "TO",
@@ -1419,7 +1543,8 @@
           "label": "Augustinópolis",
           "value": "010"
         }
-      ]
+      ],
+      "id": "d4b5"
     }
   ]
 }

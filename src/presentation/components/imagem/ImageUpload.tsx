@@ -10,7 +10,6 @@ const ImageUpload:React.FC<ImageUploadProp> = ({id}) => {
         if (e.target && e.target.files) {
             const file = e.target.files[0];
             if (file instanceof File) {  // Verificação explícita do tipo
-                console.log("Entrando", file);
                 const blob = new Blob([file], { type: file.type });  // Usando o Blob nativo do navegador
                 const fileURL = URL.createObjectURL(blob);
                 setImage(URL.createObjectURL(blob));  // Exemplo de uso correto do blob

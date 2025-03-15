@@ -25,7 +25,7 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen }) => {
         <Sessao  visible={isOpen} title='Cadastros'>
           <ItemMenu tooltip='Cadastro de Cliente' icon='PersonAdd' href='/restrito/cadastro/cliente' title='Cliente' />
           <ItemMenu tooltip='Cadastro de Fornecedor' icon='Business' href='/restrito/cadastro/fornecedor' title='Fornecedor' />
-          <ItemMenu tooltip='Cadastro de Vendedor' icon='Person' href='/restrito/cadastro/vendedor' title='Vendedor' />
+          <ItemMenu tooltip='Cadastro de Funcionario' icon='Person' href='/restrito/cadastro/funcionario' title='Funcionário' />
         </Sessao>
         <Sessao  visible={isOpen} title='Produtos'>
         <ItemMenu tooltip='Cadastro de Categoria' icon='Category' href='/restrito/cadastro/categoria' title='Categoria' />

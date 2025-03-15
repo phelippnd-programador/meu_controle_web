@@ -9,7 +9,7 @@ import { Add } from '@mui/icons-material';
 import AppSelectFieldController from '../input/AppSelectFieldController';
 import { enumToOptions, TipoTelefone } from '@/presentation/types/enums';
 import AppAdiciona from './AppAdiciona';
-import useCustomSWR from '@/presentation/hooks/ConsultaFiltro';
+import {useCustomSWR} from '@/presentation/hooks/ConsultaFiltro';
 import { ItemSelect } from '../input/model/ItemSelect';
 interface AppAdicionaTelefoneProps {
     nameBase: string;
@@ -17,9 +17,8 @@ interface AppAdicionaTelefoneProps {
 const AppAdicionaTelefone: React.FC<AppAdicionaTelefoneProps> = (props) => {
     const { data, error } = useCustomSWR<ItemSelect[]>('http://localhost:3001/tipo-telefone');
     if (error) return <p>Erro ao carregar opções</p>;
-    if (!data) return <p>Carregando...</p>;
     return (
-            <AppAdiciona required={true} title='Adicionar Telefone' nameBase={props.nameBase} component={
+            <AppAdiciona isloaded={!data} required={true} title='Adicionar Telefone' nameBase={props.nameBase} component={
                 (index) => {
                     return <>
                         <div className="lg:col-span-3">

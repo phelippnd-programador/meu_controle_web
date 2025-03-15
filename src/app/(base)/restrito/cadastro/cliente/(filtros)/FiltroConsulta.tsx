@@ -37,7 +37,7 @@ const FiltroConsulta: React.FC<FiltroProps> = (props) => {
             <Filtro onFilter={(dataForm) => {
                 buscarDados(dataForm)
             }}
-                nomeFlag={"openCadastroFornecedor"}
+                nomeFlag={"openCadastroCliente"}
                 inputs={[{
                     name: "nome", render: ({ field }) => (
                         <AppTextFieldController label={'Nome'} {...field} />

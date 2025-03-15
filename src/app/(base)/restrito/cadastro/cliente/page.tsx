@@ -1,30 +1,34 @@
 'use client'
 import React, { useState } from 'react'
+import FiltroConsulta from './(filtros)/FiltroConsulta'
 import ResultadoFiltro from './(result)/ResultadoFiltro'
 import { AppBar, Button, Divider, Tabs } from '@mui/material'
-import CadastroPage from './(paginas)/CadastroPage'
 import AppTitle from '@/presentation/components/title/AppTitle'
 import Tab from '@/presentation/components/tab/Tab'
-import { Controller, ControllerFieldState, ControllerRenderProps, FieldValues, UseFormStateReturn } from 'react-hook-form'
-import Filtro from '@/presentation/components/filtro/Filtro'
-import FiltroCliente from './(filtros)/FiltroCliente'
-import { ActiveProvider } from '@/presentation/components/provider/ActiveProvider'
+import CadastroPage from './(paginas)/CadastroPage'
+import { TypeSchemaCadastro } from './model/schemaModel'
+import { FlagProvider, useFlags } from '@/presentation/hooks/FlagProvider'
+import { TypeTabelaFornecedor, TypeTabelaFuncionario } from '@/presentation/types'
 
 const page = () => {
-    const [openCadastro, setOpenCadastro] = useState<boolean>(false);
-    if (openCadastro) {
-        return <CadastroPage setOpen={setOpenCadastro} />
+    const [idFornecedor, setIdFornecedor] = useState<string | undefined>('3372');
+    const [resultPsquisa,setResultPsquisa]  = useState<TypeTabelaFornecedor[]|undefined>(); 
+    const { flags } = useFlags();
+    if (flags['openCadastroCliente'] !== undefined &&flags['openCadastroCliente']===true) {
+        return <CadastroPage idFuncionario={idFornecedor}/>
     }
     return (
         <div>
 
-            <AppTitle title='Clientes' />
+            <AppTitle title='Cliente' />
             <div className="content">
                 <div className="filter">
-                    <FiltroCliente onOpenNovo={() => setOpenCadastro(true)} />                
+                    <FiltroConsulta setDataFiltro={(data:TypeTabelaFornecedor[]|undefined)=>{
+                        setResultPsquisa(data);
+                    }} onOpenNovo={() => {setIdFornecedor(undefined) }} />
                 </div>
                 <div className="result">
-                    <ResultadoFiltro />
+                    <ResultadoFiltro dados={resultPsquisa} setId={(id) => setIdFornecedor(id)} />
                 </div>
             </div>
         </div>
